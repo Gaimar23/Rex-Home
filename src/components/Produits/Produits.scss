@@ -1,0 +1,22 @@
+.sous-conteneur-produits{
+
+
+    .conteneur-slide{
+
+        .suivi-slide{
+            // white-space: nowrap;
+
+            .carte-article{
+                width: 250px;
+                height: 300px;
+                margin: 0 20px;
+                display: inline-block;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

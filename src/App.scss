@@ -1,0 +1,14 @@
+.app{
+
+    .conteneur-accueil{
+        background: black;
+        display: flex;
+        justify-content: center;
+
+        .accueil{
+            max-width: 1366px;
+            width: 80%;
+        }
+    }
+}
+
