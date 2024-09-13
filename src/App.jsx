@@ -1,6 +1,7 @@
 import "./App.scss";
 import Accueil from "./components/Accueil/Accueil";
 import Navbar from "./components/Navbar/Navbar";
+import NosValeurs from "./components/NosValeurs/NosValeurs";
 import Produits from "./components/Produits/Produits";
 
 function App() {
@@ -15,6 +16,11 @@ function App() {
       <section className="conteneur-produits">
         <div className="produits">
           <Produits />
+        </div>
+      </section>
+      <section className="conteneur-valeurs">
+        <div className="valeurs">
+          <NosValeurs />
         </div>
       </section>
     </div>
