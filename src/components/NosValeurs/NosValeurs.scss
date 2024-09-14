@@ -1,9 +1,10 @@
 .sous-conteneur-valeurs{
-
+    margin-bottom: 30px;
     .grid{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
+        place-items: center;
 
         .gauche{
 
@@ -16,38 +17,78 @@
                     height: 100%;
                     border-radius: 50% 50% 0 0;
                     padding: 10px 0 0 10px;
-                    background-color: orange;
+                    background-color: #8a82d1;
                 }
             }
         }
 
         .droite{
 
+            .titre{
+                color: #8a82d1;
+                font-size: 16px;
+                font-weight: 700;
+                margin-bottom: 40px;
+            }
+
 
             .liste-valeurs{
                 display: flex;
                 flex-flow: column;
-                gap: 20px;
+                gap: 25px;
 
                 .item{
-                    border: 2px solid #8a82d1;
+                    // border: 2px solid #8a82d1;
                     border-radius: 10px;
                     padding: 4px 8px;
-                    // height: 30px;
-                    // overflow-y: hidden;
+                    height: 30px;
+                    cursor: pointer;
+                    overflow-y: hidden;
                     transition: all 0.5s ease-in-out;
+                    box-shadow: 0px 0px 5px 1px white;
 
-                    .titre{
+
+                    &.active{
+                        height: 110px;
+                    }
+
+                    .head{
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
                         margin-bottom: 15px;
+                        position: relative;
+
+                        &::before{
+                            content: "";
+                            height: 2px;
+                            width: 100%;
+                            position: absolute;
+                            bottom: -8px;
+                            background: linear-gradient(to right,transparent,#8a82d1,transparent);
+                        }
+
+                        span{
+                            font-weight: 600;
+                            // margin-bottom: 10px;
+                        }
+
+                        .valeur-icon{
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
+                    .description{
+                        margin-top: 25px;
+                        opacity: 0.7;
                     }
                 }
             }
 
             .sous-titre{
-                margin-bottom: 25px;
+                margin: 10px 0 25px 0;
+                font-size: 35px;
             }
 
             .desc-valeurs{

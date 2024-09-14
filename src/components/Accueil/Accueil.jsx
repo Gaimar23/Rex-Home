@@ -14,7 +14,7 @@ const Accueil = () => {
         </p>
         <div className="conteneur-recherche">
           <input type="text" />
-          <FaLocationDot className="icon" style={{ background: "orangered" }} />
+          <FaLocationDot className="icon" />
           <span className="btn">Chercher</span>
         </div>
         <div className="achievements">

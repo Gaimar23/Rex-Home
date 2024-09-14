@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./NosValeurs.scss";
 import { images } from "../../autres/data";
 import { IoShieldCheckmarkSharp } from "react-icons/io5";
 import { FaChevronDown } from "react-icons/fa";
 
 const NosValeurs = () => {
+  const [activeItem, setActiveItem] = useState("un");
+
+  const updateActiveItem = (valeur) => {
+    setActiveItem(valeur);
+  };
+
   return (
     <div className="sous-conteneur-valeurs">
       <div className="grid">
@@ -21,8 +27,11 @@ const NosValeurs = () => {
             spacieux appartement pour vous et votre famille
           </p>
           <div className="liste-valeurs">
-            <div className="item">
-              <div className="titre">
+            <div
+              className={activeItem == "un" ? "item active" : "item"}
+              onClick={() => updateActiveItem("un")}
+            >
+              <div className="head">
                 <IoShieldCheckmarkSharp className="valeur-icon" />
                 <span>Qualité</span>
                 <FaChevronDown className="valeur-icon" />
@@ -32,8 +41,11 @@ const NosValeurs = () => {
                 spacieux appartement pour vous et votre famille
               </p>
             </div>
-            <div className="item">
-              <div className="titre">
+            <div
+              className={activeItem == "deux" ? "item active" : "item"}
+              onClick={() => updateActiveItem("deux")}
+            >
+              <div className="head">
                 <IoShieldCheckmarkSharp className="valeur-icon" />
                 <span>Qualité</span>
                 <FaChevronDown className="valeur-icon" />
@@ -43,8 +55,11 @@ const NosValeurs = () => {
                 spacieux appartement pour vous et votre famille
               </p>
             </div>
-            <div className="item">
-              <div className="titre">
+            <div
+              className={activeItem == "trois" ? "item active" : "item"}
+              onClick={() => updateActiveItem("trois")}
+            >
+              <div className="head">
                 <IoShieldCheckmarkSharp className="valeur-icon" />
                 <span>Qualité</span>
                 <FaChevronDown className="valeur-icon" />
