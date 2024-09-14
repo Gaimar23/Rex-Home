@@ -1,5 +1,6 @@
 import "./App.scss";
 import Accueil from "./components/Accueil/Accueil";
+import Contact from "./components/Contact/Contact";
 import Navbar from "./components/Navbar/Navbar";
 import NosValeurs from "./components/NosValeurs/NosValeurs";
 import Produits from "./components/Produits/Produits";
@@ -21,6 +22,11 @@ function App() {
       <section className="conteneur-valeurs">
         <div className="valeurs">
           <NosValeurs />
+        </div>
+      </section>
+      <section className="conteneur-contact">
+        <div className="contact">
+          <Contact />
         </div>
       </section>
     </div>
