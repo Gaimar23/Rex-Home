@@ -20,8 +20,8 @@ const NosValeurs = () => {
           </div>
         </div>
         <div className="droite">
-          <span className="titre">Les meilleures Offres</span>
-          <h2 className="sous-titre">Résidences les plus populaire</h2>
+          <span className="titre">Nos valeurs</span>
+          <h2 className="sous-titre">Ce en quoi nous croyons</h2>
           <p className="desc-valeurs">
             Nous garantissons un niveau de qualité inégalé Un magnifique et
             spacieux appartement pour vous et votre famille

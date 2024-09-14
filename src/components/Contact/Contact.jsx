@@ -5,6 +5,9 @@ import { images } from "../../autres/data";
 const Contact = () => {
   return (
     <div className="sous-conteneur-contact">
+      <span className="titre">Contact</span>
+      <h2 className="sous-titre">Envoyez nous un message</h2>
+
       <div className="grid">
         <div className="gauche">
           <form>
@@ -16,10 +19,10 @@ const Contact = () => {
               <label>Email</label>
               <input type="email" />
             </div>
-            <div className="phone">
+            {/* <div className="phone">
               <label>Phone</label>
               <input type="text" />
-            </div>
+            </div> */}
             <div className="message">
               <label>Message</label>
               <textarea rows={5}></textarea>

@@ -39,7 +39,7 @@ const Accueil = () => {
         </div>
       </div>
       <div className="conteneur-image">
-        <img src={images.home1} alt="" />
+        <img src={images.home3} alt="" />
       </div>
     </div>
   );

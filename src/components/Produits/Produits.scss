@@ -10,6 +10,18 @@
         color: black;
         font-size: 35px;
         margin: 10px 0 45px 0;
+        position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 370px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(to right, transparent,#4e4caf,transparent);
+        }
+
     }
 
     .conteneur-slide{
