@@ -7,6 +7,7 @@
 
     .info{
         width: 80%;
+        animation: animation-left 2s linear;
 
         h1{
             margin-bottom: 25px;
@@ -132,6 +133,23 @@
                     font-size: 13px;
                     opacity: 0.5;
                 }
+
+                &:first-child{
+                    border-top: 3px solid orange;
+                    border-right: 3px solid orange;
+                    border-radius: 50% 0 50% 50%;
+                }
+
+                &:last-child{
+                    border-top: 3px solid orange;
+                    border-left: 3px solid orange;
+                    border-radius: 0 50% 50% 50%;
+                }
+
+                &:nth-child(2){
+                    border-radius: 10px;
+                    border-top: 3px solid orange;
+                }
             }
         }
     }
@@ -140,6 +158,8 @@
         // width: 80%;
         width: 400px;
         height: 375px;
+        animation: animation-right 2s linear;
+
 
         img{
             width: 100%;
@@ -148,6 +168,28 @@
             padding: 10px 10px 0 0;
             background-color: #4e4caf;
         }
+    }
+}
+
+@keyframes animation-left {
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes animation-right {
+    from{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 

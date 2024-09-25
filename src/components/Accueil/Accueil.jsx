@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Accueil.scss";
 import { FaLocationDot } from "react-icons/fa6";
 import { images } from "../../autres/data.js";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 
 const Accueil = () => {
+  const countA = useMotionValue(0);
+  const countB = useMotionValue(0);
+  const countC = useMotionValue(0);
+  const roundedA = useTransform(countA, Math.round);
+  const roundedB = useTransform(countB, Math.round);
+  const roundedC = useTransform(countC, Math.round);
+
+  useEffect(() => {
+    const animationA = animate(countA, 9000, { duration: 10 });
+    const animationB = animate(countB, 3150, { duration: 10 });
+    const animationC = animate(countC, 421, { duration: 10 });
+
+    return animationA.stop, animationB.stop, animationC.stop;
+  }, []);
+
   return (
     <div className="accueil-grid">
       <div className="info">
@@ -20,19 +36,22 @@ const Accueil = () => {
         <div className="achievements">
           <div className="item">
             <h3>
-              <span>+</span>9000
+              <span>+</span>
+              <motion.strong>{roundedA}</motion.strong>
             </h3>
             <span>Résidences</span>
           </div>
           <div className="item">
             <h3>
-              <span>+</span>3150
+              <span>+</span>
+              <motion.strong>{roundedB}</motion.strong>
             </h3>
             <span>Clients satisfaits</span>
           </div>
           <div className="item">
             <h3>
-              <span>+</span>421
+              <span>+</span>
+              <motion.strong>{roundedC}</motion.strong>
             </h3>
             <span>Partenaires</span>
           </div>

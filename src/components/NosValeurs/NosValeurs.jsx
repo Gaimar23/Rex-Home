@@ -3,6 +3,8 @@ import "./NosValeurs.scss";
 import { images } from "../../autres/data";
 import { IoShieldCheckmarkSharp } from "react-icons/io5";
 import { FaChevronDown } from "react-icons/fa";
+import { MdVisibility } from "react-icons/md";
+import { FaCarSide } from "react-icons/fa";
 
 const NosValeurs = () => {
   const [activeItem, setActiveItem] = useState("un");
@@ -46,8 +48,8 @@ const NosValeurs = () => {
               onClick={() => updateActiveItem("deux")}
             >
               <div className="head">
-                <IoShieldCheckmarkSharp className="valeur-icon" />
-                <span>Qualité</span>
+                <MdVisibility className="valeur-icon" />
+                <span>Visibilité</span>
                 <FaChevronDown className="valeur-icon" />
               </div>
               <p className="description">
@@ -60,8 +62,8 @@ const NosValeurs = () => {
               onClick={() => updateActiveItem("trois")}
             >
               <div className="head">
-                <IoShieldCheckmarkSharp className="valeur-icon" />
-                <span>Qualité</span>
+                <FaCarSide className="valeur-icon" />
+                <span>Satisfaction</span>
                 <FaChevronDown className="valeur-icon" />
               </div>
               <p className="description">
