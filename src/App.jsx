@@ -15,17 +15,17 @@ function App() {
           <Accueil />
         </div>
       </section>
-      <section className="conteneur-produits">
+      <section className="conteneur-produits" id="articles">
         <div className="produits">
           <Produits />
         </div>
       </section>
-      <section className="conteneur-valeurs">
+      <section className="conteneur-valeurs" id="our-values">
         <div className="valeurs">
           <NosValeurs />
         </div>
       </section>
-      <section className="conteneur-contact">
+      <section className="conteneur-contact" id="contact">
         <div className="contact">
           <Contact />
         </div>
